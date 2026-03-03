@@ -1,9 +1,11 @@
 import json
 import os
 
+#PASSWORDS IN A KEY VALUE PAIR (HASHMAP), FOR MORE INFO SEARCH PYTHON DICTIONARIES IF YOU'RE CLUELESS
 valid_players = {"Subhan": "Umer", "Izaac": "Hanafin", "Seb": "Forster-Hulst", "Joseph": "Heaney", "Ben":"Oakley", "Wazza":"Wazza", "Sir":"Cool"}
 leaderboard = {}
 
+#DON'T WRITE OR CHANGE THE FILE MANUALLY IT IS NOT A .txt FILE, IT'S A .json FILE, IT WORKS DIFFERNETLY
 def main(winner):
     filename = "leaderboard.json"
     
@@ -24,4 +26,5 @@ def main(winner):
     
     print("-~Leaderboard~-")
     for rank, (name,score) in enumerate(leaderboard.items(), 1):
+
         print(f"{rank}. {name}:{score}")
